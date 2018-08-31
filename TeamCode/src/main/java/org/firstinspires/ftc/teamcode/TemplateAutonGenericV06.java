@@ -1,5 +1,5 @@
 ////////////////////////////////// THIS FILE TO BECOME TEACHING TEMPLATE ////////////////////////////////////////////
-// Edit Date:   Aug 31, 2018 @ 13:05
+// Edit Date:   Aug 31, 2018 @ 13:07
 // Team Name:   Name
 // Team Number: FTCNumber
 // Code Type:   OpMode for AUTONOMOUS
@@ -30,7 +30,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 // 
 // DEFINE OpMode
 // FORMAT: @type(name,group) 
-@Autonomous(name="TemplateAutonGenericV05", group="Derry_FTC_Templates")  
+@Autonomous(name="TemplateAutonGenericV06", group="Derry_FTC_Templates")
 //
 // DEFINE Class
 // FORMAT: access level, class name, name of class this new class extends (if any)
