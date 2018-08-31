@@ -1,5 +1,5 @@
 ////////////////////////////////// THIS FILE TO BECOME TEACHING TEMPLATE FOR AUTONOMOUS MODE ////////////////////////
-// Edit Date:   Aug 31, 2018 @ 13:16
+// Edit Date:   Aug 31, 2018 @ 14:18
 // Team Name:   Name
 // Team Number: FTCNumber
 // Code Type:   OpMode for AUTONOMOUS
