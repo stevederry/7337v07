@@ -47,18 +47,18 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
     //   FORMAT: hardware type, specific name of hardware, starting value
     DcMotor leftDriveMotor  = null;                         // One line for each hardware item
     DcMotor rightDriveMotor = null;                         // Values before '=' MUST match EXACTLY the names used when the
-    DcMotor sweeperMotor    = null;                         //   robot configuration was built using the FTC Robot Controler app
+    DcMotor sweeperMotor    = null;                         //   robot configuration was built using the FTC Robot Controller app
     Servo gripperServo      = null;                         //   on the robot controller phone
     Servo sweeperServo      = null;                               
     //
     // DEFINE CODE CONSTANTS, VARIABLES, AND BEGINNING VALUES
     // NOTE: Constants should generally be defined here (outside of METHOD bodies) 
-    //   instead of inside runOpMode() or any other METHOD,
-    //     especially if you ever want to access them outside of this class
+    //       instead of inside runOpMode() or any other METHOD,
+    //       especially if you ever want to access them outside of this class
     // FORMAT: access level, static yes/no, constant yes/no, value type, value name, beginning value
     //   - public means it can be accessed from other classes
     //   - static means there is only one copy no matter how many instances of the class you create
-    //   - final means its value never changes (constant)
+    //   - final means its value never changes (it's a constant)
     //   - long, double, etc. is the type of value held by the variable
     //
     // Drive times: all values are in milliseconds
@@ -84,7 +84,7 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
     @Override
     // Override is a note to the compiler stating that you expect that you are replacing a method
     //   with the same name from the parent (extends XXX class). That way if you typo/change
-    //   the method signature you will get an error.
+    //   the method signature you will get an error that stops you, rather than continuing with unexpected results.
     //
     // call runOpMode() method from the parent class of LinearOpMode
     public void runOpMode() throws InterruptedException  {              // "Interrupted exception" keeps the program 
@@ -97,7 +97,7 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
         // INITIALIZE HARDWARE VARIABLES
         // FORMAT: hardware variable name = location within hardware map (" value as defined in hardware map ");
         //   Values after 'get' MUST match EXACTLY the names used when the
-        //      robot configuration was built using the FTC Robot Controler app
+        //      robot configuration was built using the FTC Robot Controller app
         //      on the robot controller phone.
         //   In this code, the hardware variable names match the names of the corresponding item in the hardware map. This
         //      is not required, but is recommended because it keeps communication cleear and usage consistent
@@ -123,7 +123,7 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
                                             //   2. Inside this file, in the DEFINE ALL METHODS section, below.
         //
         gripperServo.setPosition(GRIPPER_SERVO_START);      // Set SERVO motor to desired start position
-        //                                                       using variable defined above
+                                                            //   using variable defined above
         //
         ///////////////////////////////////////////////////////////////
         // END OF PREPARATIONS
@@ -140,21 +140,21 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
         // 1. Start at predetermined location (positioned by drivers prior to game start)
         //
         // 2. Drive forward to make contact with game object, then pause to let object flex/bounce/roll/slide
-        driveForward(DRIVE_TIME_TO_OBJECT,DRIVE_POWER_FAST);// Arguments MUST be in order expected by method
-        stopRobot();                                        // Stop then sleep allows Object to bounce/flex before rogbot moves again        
-        sleep((long) 2);                                    // 2 seconds
+        driveForward(DRIVE_TIME_TO_OBJECT,DRIVE_POWER_FAST);    // Arguments MUST be in order expected by method
+        stopRobot();                                            // Stop then sleep allows Object to bounce/flex before rogbot moves again        
+        sleep((long) 2);                                        // 2 seconds
         //
         // 3. Spin left to push object off its base, then pause to let object flex/bounce/roll
-        spinLeft(DRIVE_TIME_45_DEG_TURN,DRIVE_POWER_MEDIUM);// Spin 45 deg. to left
-        stopRobot();                                        // Stop then sleep allows Object to bounce/flex before rogbot moves again        
-        sleep((long) 2);                                    // 2 seconds
+        spinLeft(DRIVE_TIME_45_DEG_TURN,DRIVE_POWER_MEDIUM);    // Spin 45 deg. to left
+        stopRobot();                                            // stopRobot then sleep allows Object to bounce/flex before rogbot moves again        
+        sleep((long) 2);                                        // 2 seconds
         //
         // 4. Spin right to prepare to park on object's original location
-        spinRight(DRIVE_TIME_45_DEG_TURN,DRIVE_POWER_MEDIUM);// Spin 45 deg. to right to return to original orientation
+        spinRight(DRIVE_TIME_45_DEG_TURN,DRIVE_POWER_MEDIUM);   // Spin 45 deg. to right to return to original orientation
         //
         // 5. Drive forward onto object's original location, then stop
         driveForward(DRIVE_TIME_OBJECT_TO_BASE,DRIVE_POWER_SLOW);    
-        stopRobot();                                        // Final stop until beginning of Teleop
+        stopRobot();                                            // Final stop until beginning of Teleop
         //
         // 6. If any parts of robot need to be repositioned (arms, etc.) to prepare for Teleop,
         //    place that code here before next "}" character
