@@ -1,5 +1,5 @@
 ////////////////////////////////// THIS FILE TO BECOME TEACHING TEMPLATE FOR AUTONOMOUS MODE ////////////////////////
-// Edit Date:   Aug 31, 2018 @ 14:18
+// Edit Date:   October 18, 2021 @ 12:35
 // Team Name:   Name
 // Team Number: FTCNumber
 // Code Type:   OpMode for AUTONOMOUS
@@ -32,7 +32,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 // 
 // DEFINE OpMode
 // FORMAT: @type(name,group) 
-@Autonomous(name="TemplateAutonGenericV06", group="Derry_FTC_Templates")
+@Autonomous(name="TemplateAutonGenericV07", group="Derry_FTC_Templates")
 //
 // DEFINE Class
 // FORMAT: access level, class name, name of class this new class extends (if any)
@@ -60,6 +60,17 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
     //   - static means there is only one copy no matter how many instances of the class you create
     //   - final means its value never changes (it's a constant)
     //   - long, double, etc. is the type of value held by the variable
+    // NAMING CONVENTIONS:  Different types of code elements should be typed consistent manners
+    //                      in order to easily identify the role they play. This is not required but his strongly recommended
+    //                      - FILENAMES......................CapFirstLetterOfEachWordAndIncludeVersionNumberV01.extensioninalllowercase
+    //                      - CONSTANTS......................ALL_CAPS_WITH_UNDERSCORES_BETWEEN_WORDS
+    //                      - HARWARE ITEMS..................lowerCaseFirstWordThenCapFirstLetter
+    //                      - VARIABLES......................lowerCaseFirstWordThenCapFirstLetter
+    //                                                       NOTE:  Hardware items and variables use the same convention
+    //                                                              because the hardware item name will be referred to and acted upon
+    //                                                              in ways very similar to variables. 
+    //                                                              (variables have one value, hardware items have multiple properties, each with a value)
+    //                      - METHODS........................all_lower_case_with_underscores_between_words
     //
     // Drive times: all values are in milliseconds
     public static final long DRIVE_TIME_TO_OBJECT       = 10000;
@@ -100,7 +111,7 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
         //      robot configuration was built using the FTC Robot Controller app
         //      on the robot controller phone.
         //   In this code, the hardware variable names match the names of the corresponding item in the hardware map. This
-        //      is not required, but is recommended because it keeps communication cleear and usage consistent
+        //      is not required, but is recommended because it keeps communication clear and usage consistent
         leftDriveMotor = hardwareMap.dcMotor.get("leftDriveMotor");
         rightDriveMotor = hardwareMap.dcMotor.get("rightDriveMotor");
         sweeperMotor = hardwareMap.dcMotor.get("sweeperMotor");
@@ -204,7 +215,7 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
     }
     //
     // METHOD spinLeft(Time,Power)
-    public void spinLeft(long Time, double Power){          // The variable names Time and Power will be assigned
+    public void spinLeft(double Time, double Power){        // The variable names Time and Power will be assigned
                                                             //   to the values passed into the method, in the order
                                                             //   they are received
         leftDriveMotor.setPower(-Power);                    // Run motor with passed Power value inverted
