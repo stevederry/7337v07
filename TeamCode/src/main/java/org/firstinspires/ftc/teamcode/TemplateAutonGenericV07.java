@@ -11,9 +11,9 @@
 //              5. Drive forward onto object's original location, then stop
 //              6. Set gripper to open position
 //              7. Wait for Teleop
+// Note:        Type // before any notes or comments so that it will NOT be executed as code.
+//              This can be at the beginning of a line or inside a line, but afer the executable code.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// TempNote: SWD
 //
 // DEFINE CODE PACKAGE
 package org.firstinspires.ftc.teamcode;
@@ -36,7 +36,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 //
 // DEFINE Class
 // FORMAT: access level, class name, name of class this new class extends (if any)
-public class TemplateAutonGenericV06 extends LinearOpMode {
+public class TemplateAutonGenericV07 extends LinearOpMode {
     //
     // DECLARE OpMode MEMBERS
     //   Utilities
@@ -93,7 +93,7 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
     public static final double GRIPPER_SERVO_CLOSED     = 250;          // Closed completely
     //
     @Override
-    // Override is a note to the compiler stating that you expect that you are replacing a method
+    // Override is a note to the code compiler stating that you expect that you are replacing a method
     //   with the same name from the parent (extends XXX class). That way if you typo/change
     //   the method signature you will get an error that stops you, rather than continuing with unexpected results.
     //
@@ -224,7 +224,7 @@ public class TemplateAutonGenericV06 extends LinearOpMode {
         sleep(Time);                                        // Wait here in code for duration of passed Time value,
                                                             //   (allows motors to run for duration of Time)
     }
-}   // END of public class TemplateAutonGenericV05
+}   // END of public class TemplateAutonGenericV07
 //
 ///////////////////////////////////////////////////////////////
 // END OF FILE
