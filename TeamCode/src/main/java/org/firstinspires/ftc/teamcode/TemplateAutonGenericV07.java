@@ -1,5 +1,5 @@
 ////////////////////////////////// THIS FILE TO BECOME TEACHING TEMPLATE FOR AUTONOMOUS MODE ////////////////////////
-// Edit Date:   October 18, 2021 @ 12:35
+// Edit Date:   October 21, 2022 @ 08:29
 // Team Name:   Name
 // Team Number: FTCNumber
 // Code Type:   OpMode for AUTONOMOUS
@@ -59,8 +59,8 @@ public class TemplateAutonGenericV07 extends LinearOpMode {
     //   - public means it can be accessed from other classes
     //   - static means there is only one copy no matter how many instances of the class you create
     //   - final means its value never changes (it's a constant)
-    //   - long, double, etc. is the type of value held by the variable
-    // NAMING CONVENTIONS:  Different types of code elements should be typed consistent manners
+    //   - long, double, etc. is the type of value it can hold
+    // NAMING CONVENTIONS:  Different types of code elements should be typed in consistent manners
     //                      in order to easily identify the role they play. This is not required but his strongly recommended
     //                      - FILENAMES......................CapFirstLetterOfEachWordAndIncludeVersionNumberV01.extensioninalllowercase
     //                      - CONSTANTS......................ALL_CAPS_WITH_UNDERSCORES_BETWEEN_WORDS
@@ -152,12 +152,12 @@ public class TemplateAutonGenericV07 extends LinearOpMode {
         //
         // 2. Drive forward to make contact with game object, then pause to let object flex/bounce/roll/slide
         driveForward(DRIVE_TIME_TO_OBJECT,DRIVE_POWER_FAST);    // Arguments MUST be in order expected by method
-        stopRobot();                                            // Stop then sleep allows Object to bounce/flex before rogbot moves again        
+        stopRobot();                                            // stopRobot then sleep allows Object to bounce/flex before robot moves again        
         sleep((long) 2);                                        // 2 seconds
         //
         // 3. Spin left to push object off its base, then pause to let object flex/bounce/roll
         spinLeft(DRIVE_TIME_45_DEG_TURN,DRIVE_POWER_MEDIUM);    // Spin 45 deg. to left
-        stopRobot();                                            // stopRobot then sleep allows Object to bounce/flex before rogbot moves again        
+        stopRobot();                                            // stopRobot then sleep allows Object to bounce/flex before robot moves again        
         sleep((long) 2);                                        // 2 seconds
         //
         // 4. Spin right to prepare to park on object's original location
